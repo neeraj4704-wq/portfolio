@@ -1,0 +1,295 @@
+/* ===================================
+   TOPBAR
+=================================== */
+
+.topbar{
+    height:80px;
+    background:#07110d;
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+/* ===================================
+   LEFT
+=================================== */
+
+.topbar-left{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+}
+
+.topbar-left h1{
+
+    font-size:32px;
+    color:white;
+    margin:0;
+    font-weight:700;
+
+}
+
+/* ===================================
+   SEARCH
+=================================== */
+
+.search-box{
+
+    width:330px;
+    height:46px;
+
+    background:#0d1914;
+
+    border:1px solid rgba(55,255,159,.12);
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:0 18px;
+
+    transition:.3s;
+
+}
+
+.search-box:hover{
+
+    border-color:#37ff9f55;
+
+}
+
+.search-box:focus-within{
+
+    border-color:#37ff9f;
+
+    box-shadow:0 0 20px rgba(55,255,159,.12);
+
+}
+
+.search-box svg{
+
+    color:#37ff9f;
+    font-size:15px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    background:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.search-box input::placeholder{
+
+    color:#6f867b;
+
+}
+
+/* ===================================
+   RIGHT
+=================================== */
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+}
+
+/* ===================================
+   NOTIFICATION
+=================================== */
+
+.notification{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:14px;
+
+    background:#0d1914;
+
+    border:1px solid rgba(55,255,159,.10);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.notification svg{
+
+    color:#37ff9f;
+
+    font-size:18px;
+
+}
+
+.notification:hover{
+
+    background:#13211b;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===================================
+   PROFILE
+=================================== */
+
+.admin-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.profile-icon{
+
+    font-size:44px;
+
+    color:#37ff9f;
+
+}
+
+.admin-profile h4{
+
+    margin:0;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.admin-profile span{
+
+    color:#8ca49a;
+
+    font-size:13px;
+
+}
+
+/* ===================================
+   LOGOUT
+=================================== */
+
+.logout-btn{
+
+    background:transparent;
+
+    border:1px solid #37ff9f;
+
+    color:#37ff9f;
+
+    padding:10px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.logout-btn:hover{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:1100px){
+
+.search-box{
+
+width:240px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.search-box{
+
+display:none;
+
+}
+
+.admin-profile div{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.topbar{
+
+padding:0 18px;
+
+}
+
+.topbar-left h1{
+
+font-size:24px;
+
+}
+
+.logout-btn{
+
+padding:8px 15px;
+
+font-size:13px;
+
+}
+
+}

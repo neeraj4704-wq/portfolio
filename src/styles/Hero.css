@@ -1,0 +1,347 @@
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:90px;
+
+    /* Main background */
+    background: #020705
+}
+
+/* Grid */
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(55,255,159,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(55,255,159,.05) 1px, transparent 1px);
+
+    background-size:52px 52px;
+
+    z-index:0;
+}
+
+/* Soft center glow */
+/* .hero::after{
+    content:"";
+    position:absolute;
+
+    top:45%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:rgba(55,255,159,.10);
+
+    filter:blur(180px);
+
+    z-index:1;
+} */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:min(1100px,90%);
+}
+
+.hero-tag{
+    color:#37ff9f;
+    letter-spacing:2px;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.hero-title{
+    color:#ffffff;
+    font-size:72px;
+    font-weight:800;
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+    text-shadow:
+        0 0 8px #37ff9f,
+        0 0 18px rgba(55,255,159,.45);
+}
+
+.hero-role{
+    color:#37ff9f;
+    font-size:48px;
+    margin-bottom:30px;
+}
+
+.hero-description{
+    color:#9db2a7;
+    font-size:24px;
+    width:650px;
+    max-width:100%;
+    line-height:1.6;
+    margin-bottom:45px;
+}
+
+.social-links{
+    display:flex;
+    gap:18px;
+    margin-bottom:45px;
+}
+
+.social-icon{
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:2px solid #37ff9f;
+    border-radius:14px;
+
+    color:#c5d5cd;
+    text-decoration:none;
+
+    font-size:30px;
+
+    background:rgba(10,25,18,.55);
+
+    transition:all .3s ease;
+}
+
+.social-icon:hover{
+    background:#37ff9f;
+    color:#07120c;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 22px rgba(55,255,159,.45);
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.stat-card{
+    background:rgba(6,20,13,.70);
+
+    border:1px solid rgba(55,255,159,.25);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    min-height:170px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+    border-color:#37ff9f;
+    box-shadow:0 0 20px rgba(55,255,159,.18);
+    transform:translateY(-4px);
+}
+
+.stat-card h3{
+    color:#37ff9f;
+
+    font-size:50px;
+
+    margin:0 0 15px;
+
+    text-shadow:
+        0 0 8px rgba(55,255,159,.45);
+}
+
+.stat-card p{
+    color:#6f8c7d;
+
+    letter-spacing:2px;
+
+    font-size:15px;
+
+    margin:0;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .hero{
+        padding:120px 0 80px;
+    }
+
+    .hero-title{
+        font-size:56px;
+    }
+
+    .hero-role{
+        font-size:40px;
+    }
+
+    .hero-description{
+        font-size:20px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-title{
+        font-size:42px;
+    }
+
+    .hero-role{
+        font-size:32px;
+    }
+
+    .hero-description{
+        font-size:18px;
+    }
+
+    .social-links{
+        justify-content:center;
+    }
+
+}
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:992px){
+
+    .hero{
+        padding:120px 6% 80px;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero-title{
+        font-size:60px;
+    }
+
+    .hero-role{
+        font-size:40px;
+    }
+
+    .hero-description{
+        width:100%;
+        max-width:650px;
+    }
+
+    .stats{
+        flex-wrap:wrap;
+    }
+
+    .stat-card{
+        min-width:220px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+    .hero{
+        padding:120px 25px 70px;
+        text-align:center;
+    }
+
+    .hero-content{
+        width:100%;
+    }
+
+    .hero-tag{
+        font-size:15px;
+    }
+
+    .hero-title{
+        font-size:44px;
+        line-height:1.15;
+    }
+
+    .hero-role{
+        font-size:30px;
+    }
+
+    .hero-description{
+        width:100%;
+        font-size:18px;
+        margin:0 auto 35px;
+    }
+
+    .social-links{
+        justify-content:center;
+        margin-bottom:45px;
+    }
+
+    .social-icon{
+        width:55px;
+        height:55px;
+        font-size:24px;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .stat-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .stat-card h3{
+        font-size:36px;
+    }
+
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:480px){
+
+    .hero-title{
+        font-size:36px;
+    }
+
+    .hero-role{
+        font-size:24px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .stat-card h3{
+        font-size:30px;
+    }
+
+}

@@ -1,0 +1,383 @@
+/* ======================================
+   Overlay
+====================================== */
+
+.modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    animation:fadeIn .25s ease;
+
+    padding:30px;
+
+}
+
+/* ======================================
+   Modal
+====================================== */
+
+.project-modal{
+
+    width:900px;
+
+    max-width:100%;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#0d1713;
+
+    border:1px solid rgba(55,255,159,.18);
+
+    border-radius:22px;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.45);
+
+    animation:scaleUp .25s ease;
+
+    position:relative;
+
+}
+
+/* ======================================
+   Cover Image
+====================================== */
+
+.modal-cover{
+
+    width:100%;
+
+    max-height:420px;
+
+    object-fit:contain;
+
+    background:#07110d;
+
+    display:block;
+
+    padding:20px;
+
+    border-bottom:1px solid rgba(55,255,159,.12);
+
+}
+
+/* ======================================
+   Content
+====================================== */
+
+.modal-content{
+
+    padding:35px;
+
+}
+
+.modal-content h2{
+
+    color:white;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+/* ======================================
+   Tags
+====================================== */
+
+.modal-tags{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+}
+
+.modal-tags span{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+}
+
+/* ======================================
+   Sections
+====================================== */
+
+.modal-section{
+
+    margin-bottom:30px;
+
+}
+
+.modal-section h3{
+
+    color:#37ff9f;
+
+    margin-bottom:10px;
+
+}
+
+.modal-section p{
+
+    color:#b7c5be;
+
+    line-height:1.8;
+
+}
+
+/* ======================================
+   Buttons
+====================================== */
+
+.modal-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+.modal-buttons a{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+    text-decoration:none;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.modal-buttons a:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ======================================
+   Close Button
+====================================== */
+
+.close-modal{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ffffff22;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.close-modal:hover{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+}
+
+/* ======================================
+   Animations
+====================================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes scaleUp{
+
+from{
+
+opacity:0;
+
+transform:scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/* ======================================
+   Responsive
+====================================== */
+
+@media(max-width:768px){
+
+.project-modal{
+
+width:100%;
+
+}
+
+.modal-cover{
+
+height:220px;
+
+}
+
+.modal-content{
+
+padding:25px;
+
+}
+
+.modal-content h2{
+
+font-size:26px;
+
+}
+
+.modal-buttons{
+
+flex-direction:column;
+
+}
+
+.modal-buttons a{
+
+text-align:center;
+
+}
+
+}
+/* ==============================
+   Screenshot Lightbox
+============================== */
+
+.image-lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.88);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    animation:fadeIn .25s;
+
+}
+
+.lightbox-image{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:16px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.5);
+
+}
+
+.close-lightbox{
+
+    position:absolute;
+
+    top:30px;
+
+    right:35px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ffffff22;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.close-lightbox:hover{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+}

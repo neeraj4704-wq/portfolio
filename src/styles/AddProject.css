@@ -1,0 +1,414 @@
+/* ==========================
+   CONTAINER
+========================== */
+
+.add-project-container{
+    background:#08110d;
+    border:1px solid rgba(55,255,159,.12);
+    border-radius:22px;
+    padding:35px;
+    margin-top:25px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.add-project-form{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* ==========================
+   ROW
+========================== */
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+/* ==========================
+   GROUP
+========================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.form-group label{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    background:#111b17;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#37ff9f;
+
+    box-shadow:0 0 15px rgba(55,255,159,.18);
+
+}
+
+/* ==========================
+   FILE INPUT
+========================== */
+
+.form-group input[type="file"]{
+
+    padding:14px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================
+   SAVE BUTTON
+========================== */
+
+.save-btn{
+
+    margin-top:10px;
+
+    padding:18px;
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 40px rgba(55,255,159,.28);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+.form-row{
+
+grid-template-columns:1fr;
+
+}
+
+.add-project-container{
+
+padding:25px;
+
+}
+
+}
+/* ===========================
+   Screenshot Preview
+=========================== */
+
+.screenshots-preview{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.shot-card{
+
+position:relative;
+
+width:170px;
+
+height:110px;
+
+border-radius:12px;
+
+overflow:hidden;
+
+border:2px solid rgba(55,255,159,.18);
+
+}
+
+.shot-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.shot-card button{
+
+position:absolute;
+
+top:8px;
+
+right:8px;
+
+width:28px;
+
+height:28px;
+
+border:none;
+
+border-radius:50%;
+
+background:#ff3d57;
+
+color:white;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.shot-card button:hover{
+
+transform:scale(1.1);
+
+}
+.upload-box{
+    border:2px dashed rgba(55,255,159,.25);
+    border-radius:18px;
+    padding:40px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    background:#09130f;
+}
+
+.upload-box:hover{
+    border-color:#37ff9f;
+    background:#0d1914;
+}
+
+.upload-box h3{
+    color:#37ff9f;
+    margin-bottom:10px;
+}
+
+.upload-box p{
+    color:#8fa39a;
+}
+
+.selected-file{
+    margin-top:25px;
+    padding:16px;
+    border-radius:12px;
+    background:#07100c;
+    border:1px solid rgba(55,255,159,.15);
+}
+
+.selected-file strong{
+    display:block;
+    color:white;
+}
+
+.selected-file span{
+    color:#8fa39a;
+    font-size:14px;
+}
+/* =====================================
+   COVER IMAGE
+===================================== */
+
+.cover-upload-box{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+height:260px;
+
+border:2px dashed rgba(55,255,159,.25);
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.35s;
+
+background:#08130e;
+
+overflow:hidden;
+
+}
+
+.cover-upload-box:hover{
+
+border-color:#37ff9f;
+
+background:#0d1914;
+
+}
+
+.upload-icon{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.cover-upload-box h3{
+
+color:#37ff9f;
+
+margin-bottom:10px;
+
+font-size:22px;
+
+}
+
+.cover-upload-box p{
+
+color:#9ab1a6;
+
+margin-bottom:8px;
+
+}
+
+.cover-upload-box small{
+
+color:#70877d;
+
+}
+
+.cover-preview-large{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+/* ===================================
+   SCREENSHOT UPLOAD
+=================================== */
+
+.screenshots-upload-box{
+    min-height: 240px;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px dashed rgba(55,255,159,.22);
+    border-radius: 18px;
+
+    background: #09130f;
+
+    cursor: pointer;
+    transition: .35s;
+}
+
+.screenshots-upload-box:hover{
+    border-color:#37ff9f;
+    background:#0d1914;
+}
+
+.screenshots-upload-box .upload-icon{
+    font-size:60px;
+    margin-bottom:18px;
+}
+
+.screenshots-upload-box h3{
+    margin:0;
+    color:#37ff9f;
+    font-size:34px;
+    font-weight:700;
+}
+
+.screenshots-upload-box p{
+    margin-top:14px;
+    color:#9ab1a6;
+    font-size:18px;
+    text-align:center;
+}
+
+.screenshots-upload-box small{
+    margin-top:14px;
+    color:#6e837a;
+    font-size:14px;
+    letter-spacing:1px;
+}

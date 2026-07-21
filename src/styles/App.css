@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020705;
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Main green glow */
+body::before{
+    content:"";
+    position:fixed;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at 30% 20%,
+        rgba(55,255,159,.10),
+        transparent 45%),
+
+        radial-gradient(circle at 80% 70%,
+        rgba(55,255,159,.08),
+        transparent 40%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+/* Grid over the entire portfolio */
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(55,255,159,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(55,255,159,.04) 1px, transparent 1px);
+
+    background-size:52px 52px;
+
+    pointer-events:none;
+    z-index:-1;
+}

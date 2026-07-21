@@ -1,0 +1,171 @@
+/* ===================================
+   RECENT PROJECTS
+=================================== */
+
+.recent-projects{
+    background:linear-gradient(
+        180deg,
+        #0d1713 0%,
+        #08110d 100%
+    );
+
+    border:1px solid rgba(55,255,159,.10);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    margin-top:10px;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.recent-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.recent-header h2{
+
+    margin:0;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.recent-header button{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.recent-header button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(55,255,159,.20);
+
+}
+
+/* ===================================
+   EMPTY STATE
+=================================== */
+
+.empty-project-box{
+
+    border:2px dashed rgba(55,255,159,.15);
+
+    border-radius:18px;
+
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.empty-project-box:hover{
+
+    border-color:#37ff9f55;
+
+}
+
+.empty-folder{
+
+    font-size:72px;
+
+    color:#37ff9f;
+
+    margin-bottom:20px;
+
+}
+
+.empty-project-box h3{
+
+    margin:0;
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:12px;
+
+}
+
+.empty-project-box p{
+
+    max-width:500px;
+
+    color:#8ca49a;
+
+    line-height:1.7;
+
+    font-size:16px;
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+.recent-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.recent-header button{
+
+width:100%;
+
+}
+
+.empty-project-box{
+
+padding:35px 20px;
+
+}
+
+}

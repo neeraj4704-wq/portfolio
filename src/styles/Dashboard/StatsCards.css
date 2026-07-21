@@ -1,0 +1,212 @@
+/* ===================================
+   STATS GRID
+=================================== */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin-bottom:40px;
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.stats-card{
+
+    position:relative;
+
+    background:linear-gradient(
+        180deg,
+        #0d1713 0%,
+        #08110d 100%
+    );
+
+    border:1px solid rgba(55,255,159,.10);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    height:170px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+}
+
+/* Glow strip */
+
+.stats-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #37ff9f,
+        #14c96f
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+}
+
+.stats-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#37ff9f55;
+
+    box-shadow:
+    0 18px 40px rgba(55,255,159,.12);
+
+}
+
+.stats-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* ===================================
+   ICON
+=================================== */
+
+.stats-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:rgba(55,255,159,.10);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#37ff9f;
+
+    font-size:24px;
+
+    transition:.3s;
+
+}
+
+.stats-card:hover .stats-icon{
+
+    transform:scale(1.08);
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+}
+
+/* ===================================
+   NUMBER
+=================================== */
+
+.stats-card h2{
+
+    margin:0;
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.stats-card p{
+
+    margin:0;
+
+    color:#8fa39a;
+
+    font-size:15px;
+
+    letter-spacing:.3px;
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:1200px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-card{
+
+height:155px;
+
+}
+
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+    .stats-grid{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+        justify-items:center;
+    }
+
+    .stats-card{
+        width:100%;
+        max-width:350px;
+    }
+
+}

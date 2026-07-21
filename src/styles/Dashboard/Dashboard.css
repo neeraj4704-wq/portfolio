@@ -1,0 +1,198 @@
+/* ===========================
+   DASHBOARD LAYOUT
+=========================== */
+
+.dashboard-layout{
+    display:flex;
+    min-height:100vh;
+    background:#030907;
+    color:#fff;
+    overflow:hidden;
+    font-family:Inter, sans-serif;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.dashboard-main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+}
+
+.dashboard-content{
+    flex:1;
+    padding:40px;
+    overflow-y:auto;
+}
+
+/* ===========================
+   WELCOME SECTION
+=========================== */
+
+.welcome-section{
+    margin-bottom:35px;
+}
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    margin-bottom:10px;
+}
+
+.dashboard-header h1{
+    font-size:42px;
+    font-weight:700;
+    color:#ffffff;
+    margin:0 0 10px;
+}
+
+.dashboard-header p{
+    color:#8da49a;
+    font-size:17px;
+    margin:0;
+    max-width:600px;
+    line-height:1.6;
+}
+
+/* Waving Hand */
+
+.dashboard-header span{
+    display:inline-block;
+    animation:wave 2s infinite;
+}
+
+@keyframes wave{
+
+0%{
+    transform:rotate(0deg);
+}
+
+15%{
+    transform:rotate(18deg);
+}
+
+30%{
+    transform:rotate(-10deg);
+}
+
+45%{
+    transform:rotate(18deg);
+}
+
+60%{
+    transform:rotate(0deg);
+}
+
+100%{
+    transform:rotate(0deg);
+}
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.add-project-big-btn{
+
+    background:#37ff9f;
+
+    color:#07110d;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px 30px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+    box-shadow:0 15px 30px rgba(55,255,159,.18);
+
+}
+
+.add-project-big-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(55,255,159,.35);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.dashboard-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb{
+    background:#37ff9f55;
+    border-radius:20px;
+}
+
+.dashboard-content::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.dashboard-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.dashboard-content{
+
+padding:25px;
+
+}
+
+.dashboard-header h1{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard-header{
+
+gap:20px;
+
+}
+
+.add-project-big-btn{
+
+width:100%;
+
+}
+
+}

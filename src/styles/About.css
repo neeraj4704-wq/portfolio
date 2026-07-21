@@ -1,0 +1,242 @@
+.about{
+    padding:120px 8%;
+   background: #020705;
+    position:relative;
+}
+
+.about-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#37ff9f;
+    margin-bottom:70px;
+    text-shadow:0 0 15px #37ff9f55;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-tag{
+    color:#37ff9f;
+    letter-spacing:2px;
+    font-size:15px;
+}
+
+.about-text h3{
+    margin:20px 0;
+    font-size:42px;
+    color:white;
+    line-height:1.3;
+}
+
+.about-text p{
+    color:#9fb3aa;
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.education-card{
+    margin-top:40px;
+    border:1px solid rgba(55,255,159,.2);
+    border-radius:18px;
+    padding:30px;
+    background:rgba(8,18,12,.7);
+}
+
+.education-card h4{
+    color:#37ff9f;
+    margin-bottom:15px;
+}
+
+.education-card h5{
+    color:white;
+    margin-bottom:8px;
+    font-size:22px;
+}
+
+.education-card p{
+    margin:0;
+}
+
+.education-card span{
+    color:#37ff9f;
+    display:block;
+    margin-top:12px;
+}
+
+.profile-box{
+    border:1px solid rgba(55,255,159,.2);
+    border-radius:25px;
+    padding:45px;
+    background:rgba(8,18,12,.7);
+}
+
+.profile-circle{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:35px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:46px;
+    font-weight:bold;
+
+    background:#37ff9f;
+    color:#07120d;
+
+    box-shadow:0 0 35px #37ff9f;
+}
+
+.profile-box h3{
+    text-align:center;
+    margin-bottom:30px;
+    color:white;
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill-tags span{
+    border:1px solid #37ff9f;
+    color:#37ff9f;
+    padding:10px 18px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.skill-tags span:hover{
+    background:#37ff9f;
+    color:#07120d;
+    box-shadow:0 0 18px #37ff9f;
+    transform:translateY(-3px);
+}
+
+@media(max-width:900px){
+
+.about-grid{
+    grid-template-columns:1fr;
+}
+
+.about-text{
+    text-align:center;
+}
+
+}
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:992px){
+
+    .about{
+        padding:100px 6%;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .profile-box{
+        max-width:600px;
+        margin:auto;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+    .about{
+        padding:80px 20px;
+    }
+
+    .section-title{
+        font-size:2.4rem;
+        margin-bottom:50px;
+    }
+
+    .about-text{
+        text-align:center;
+    }
+
+    .about-tag{
+        font-size:14px;
+    }
+
+    .about-text h3{
+        font-size:2rem;
+    }
+
+    .about-text p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .education-card{
+        padding:25px;
+        text-align:left;
+    }
+
+    .profile-box{
+        padding:35px 25px;
+    }
+
+    .profile-circle{
+        width:110px;
+        height:110px;
+        font-size:40px;
+    }
+
+    .skill-tags{
+        gap:12px;
+    }
+
+    .skill-tags span{
+        padding:8px 15px;
+        font-size:14px;
+    }
+
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:480px){
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .about-text h3{
+        font-size:1.7rem;
+    }
+
+    .profile-circle{
+        width:90px;
+        height:90px;
+        font-size:32px;
+    }
+
+}

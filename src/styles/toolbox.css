@@ -1,0 +1,430 @@
+.toolbox{
+    width:100%;
+    min-height:100vh;
+    padding:120px 8%;
+    background:#020705;
+    color:white;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.toolbox-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+}
+
+.toolbox-header h2{
+    font-size:3.5rem;
+}
+
+.toolbox-header p{
+    color:#8fa39a;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.add-project-btn{
+    padding:15px 30px;
+    background:transparent;
+    color:#37ff9f;
+    border:1px solid #37ff9f;
+    border-radius:12px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:.3s;
+}
+
+.add-project-btn:hover{
+    background:#37ff9f;
+    color:#07120d;
+}
+
+/* ===========================
+   Tool Cards
+=========================== */
+
+.tool-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:30px;
+    margin-bottom:60px;
+}
+
+.tool-card{
+    background:#0b1411;
+    border:1px solid rgba(55,255,159,.2);
+    border-radius:20px;
+    padding:35px;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.tool-card:hover,
+.tool-card.active{
+    border-color:#37ff9f;
+    box-shadow:0 0 25px rgba(55,255,159,.3);
+    transform:translateY(-8px);
+}
+
+.tool-icon{
+    font-size:42px;
+    color:#37ff9f;
+    margin-bottom:25px;
+}
+
+.tool-card h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.tool-card p{
+    color:#8fa39a;
+}
+
+/* ===========================
+   Projects
+=========================== */
+
+.projects-container{
+    margin-top:60px;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+    gap:35px;
+}
+
+/* Project Card */
+
+.portfolio-project-card{
+    background:#0b1411;
+    border:1px solid rgba(55,255,159,.18);
+    border-radius:22px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.portfolio-project-card:hover{
+    transform:scale(1.08);
+    border-color:#37ff9f;
+    box-shadow:0 0 30px rgba(55,255,159,.25);
+}
+
+/* Cover Image */
+
+.portfolio-cover{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    padding:20px;
+    background:#08110d;
+}
+
+/* Body */
+
+.portfolio-body{
+    padding:26px;
+}
+
+.portfolio-tool{
+    display:inline-block;
+    padding:6px 15px;
+    background:#37ff9f;
+    color:#07120d;
+    border-radius:30px;
+    font-weight:700;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.portfolio-body h3{
+    font-size:30px;
+    margin-bottom:14px;
+    color:white;
+}
+
+.portfolio-body p{
+    color:#9bb0a6;
+    line-height:1.7;
+    margin-bottom:22px;
+
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.portfolio-image{
+    height:220px;
+    background:#08110d;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* Button */
+
+.view-project-btn{
+    width:100%;
+    height:52px;
+    border:none;
+    border-radius:14px;
+    background:#37ff9f;
+    color:#07120d;
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.view-project-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 18px rgba(55,255,159,.45);
+}
+
+/* ===========================
+   Empty State
+=========================== */
+
+.project-placeholder{
+    width:100%;
+    min-height:320px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    border:2px dashed rgba(55,255,159,.25);
+    border-radius:20px;
+
+    background:#09110d;
+
+    padding:40px;
+}
+
+.project-placeholder h2{
+    font-size:2rem;
+    color:#37ff9f;
+    margin-bottom:15px;
+}
+
+.project-placeholder p{
+    color:white;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.project-placeholder span{
+    color:#8fa39a;
+    line-height:1.6;
+    max-width:500px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1200px){
+    .tool-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .toolbox-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .tool-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .tool-grid{
+        grid-template-columns:1fr;
+    }
+
+    .toolbox-header h2{
+        font-size:2.5rem;
+    }
+}
+/* ===========================
+   Large Tablets
+=========================== */
+
+@media (max-width:1200px){
+
+    .tool-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ===========================
+   Tablets
+=========================== */
+
+@media (max-width:992px){
+
+    .toolbox{
+        padding:100px 6%;
+    }
+
+    .toolbox-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:25px;
+    }
+
+    .toolbox-header h2{
+        font-size:3rem;
+    }
+
+    .tool-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects-grid{
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+    .toolbox{
+        padding:80px 20px;
+    }
+
+    .toolbox-header{
+        align-items:center;
+        text-align:center;
+    }
+
+    .toolbox-header h2{
+        font-size:2.4rem;
+    }
+
+    .toolbox-header p{
+        font-size:16px;
+    }
+
+    .add-project-btn{
+        display:none;
+    }
+
+    .tool-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+    .tool-card{
+        padding:25px 20px;
+    }
+
+    .tool-icon{
+        font-size:34px;
+        margin-bottom:18px;
+    }
+
+    .tool-card h3{
+        font-size:1.3rem;
+    }
+
+    .tool-card p{
+        font-size:14px;
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .portfolio-project-card{
+        max-width:420px;
+        margin:auto;
+    }
+
+    .portfolio-cover{
+        height:220px;
+        padding:15px;
+    }
+
+    .portfolio-body{
+        padding:22px;
+    }
+
+    .portfolio-body h3{
+        font-size:1.6rem;
+    }
+
+    .portfolio-body p{
+        font-size:15px;
+    }
+
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:480px){
+
+    .tool-grid{
+        grid-template-columns:1fr;
+    }
+
+    .toolbox-header h2{
+        font-size:2rem;
+    }
+
+    .portfolio-cover{
+        height:180px;
+    }
+
+    .portfolio-body h3{
+        font-size:1.4rem;
+    }
+
+    .project-placeholder{
+        padding:30px 20px;
+    }
+
+    .project-placeholder h2{
+        font-size:1.7rem;
+    }
+
+    .project-placeholder p{
+        font-size:18px;
+    }
+
+}
